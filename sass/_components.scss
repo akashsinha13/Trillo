@@ -108,3 +108,61 @@
         padding-right: 0.5rem;
     }
 }
+
+//sidebar
+.sidebar-nav {
+    font-size: 1.1rem;
+    list-style: none;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        list-style: none;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 0.2rem;
+        }
+
+        &-link {
+            z-index: 2;
+            text-decoration: none;
+            color: var(--color-grey-light-1);
+            text-transform: uppercase;
+        }
+    
+        &-icon {
+            z-index: 2;
+            width: 1.2rem;
+            height: 1.2rem;
+            fill: currentColor; // color of element or parent element
+            margin-right: 1rem;
+        }
+    }
+
+    &-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary);
+        transform: scaleY(0);
+        transition: transform 0.2s,
+                    width 0.4s cubic-bezier(1, 0, 0, 1) .2s; // we can apply different timing for diffrent props.
+    }
+
+    &-item:hover::before,
+    &-item-active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+}
+
+.legal {
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 1rem;
+}

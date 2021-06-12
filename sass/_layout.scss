@@ -5,7 +5,7 @@
 }
 
 .header {
-    height: 4rem;
+    height: 8vh;
     background-color:white;
     border-bottom: var(--color-grey-light-2);
     display: flex;
@@ -15,15 +15,18 @@
 }
 
 .content {
+    height: 92vh;
     display: flex;
 }
 
-.navigation {
+.sidebar {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 20%; // take 20% width of parent
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
-    background-color: white;
     flex: 1; // grow, shrink, take remaining width
 }

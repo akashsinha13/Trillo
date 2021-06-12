@@ -1,58 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>Trillo &mdash; Your all-in-one booking app</title>
-    </head>
-    <body>
-        <div class="container">
-            <header class="header">
-                <img src="img/logo.png" alt="trillo-logo" class="logo">
 
-                <form action="#" class="search">
-                    <input type="text" class="search-input" placeholder="Search hotels">
-                    <button class="search-button">
-                        <svg class="search-icon">
-                            <!-- sprite.svg contains all svg; so we need to select one out of it -->
-                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-                        </svg>
-                    </button>
-                </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <nav class="user-nav">
-                    <div class="user-nav-icon-box">
-                        <svg class="user-nav-icon">
-                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
-                        </svg>
-                        <span class="user-nav-notifications">4</span>
-                    </div>
-                    <div class="user-nav-icon-box">
-                        <svg class="user-nav-icon">
-                            <use xlink:href="img/sprite.svg#icon-chat"></use>
-                        </svg>
-                        <span class="user-nav-notifications">9</span>
-                    </div>
-                    <div class="user-nav-user">
-                        <img src="img/user.jpg" alt="user" class="user-nav-user-photo">
-                        <span class="user-nav-user-name">Akash</span>
-                    </div>
-                </nav>
-            </header>
-            
-            <div class="content">
-                <nav class="navigation">
-                    Navigation
-                </nav>
-                <main class="hotel-view">
-                    Hotel view
-                </main>
-            </div>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <title>Trillo &mdash; Your all-in-one booking app</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="img/logo.png" alt="trillo-logo" class="logo">
+
+            <form action="#" class="search">
+                <input type="text" class="search-input" placeholder="Search hotels">
+                <button class="search-button">
+                    <svg class="search-icon">
+                        <!-- sprite.svg contains all svg; so we need to select one out of it -->
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <nav class="user-nav">
+                <div class="user-nav-icon-box">
+                    <svg class="user-nav-icon">
+                        <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                    </svg>
+                    <span class="user-nav-notifications">4</span>
+                </div>
+                <div class="user-nav-icon-box">
+                    <svg class="user-nav-icon">
+                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                    </svg>
+                    <span class="user-nav-notifications">9</span>
+                </div>
+                <div class="user-nav-user">
+                    <img src="img/user.jpg" alt="user" class="user-nav-user-photo">
+                    <span class="user-nav-user-name">Akash</span>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <nav class="sidebar">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-item sidebar-nav-item-active">
+                        <a href="#" class="sidebar-nav-item-link">
+                            <svg class="sidebar-nav-item-icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                                <span>Home</span>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-item-link">
+                            <svg class="sidebar-nav-item-icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                <span>Flight</span>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-item-link">
+                            <svg class="sidebar-nav-item-icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                                <span>Car rental</span>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="#" class="sidebar-nav-item-link">
+                            <svg class="sidebar-nav-item-icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                                <span>Tours</span>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="legal">
+                    &copy; 2021 by trillo. All right reserved.
+                </div>
+            </nav>
+            <main class="hotel-view">
+                Hotel view
+            </main>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
