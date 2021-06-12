@@ -1,0 +1,29 @@
+.container {
+    background-color:var(--color-grey-light-1);
+    height: 100vh;
+    min-width: 100%;
+}
+
+.header {
+    height: 4rem;
+    background-color:white;
+    border-bottom: var(--color-grey-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.content {
+    display: flex;
+}
+
+.navigation {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 20%; // take 20% width of parent
+}
+
+.hotel-view {
+    background-color: white;
+    flex: 1; // grow, shrink, take remaining width
+}

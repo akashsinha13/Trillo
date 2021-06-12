@@ -1,0 +1,96 @@
+// Logo
+.logo {
+    height: 2.2rem;
+}
+
+// Search box
+.search {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-input {
+        width: 90%;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: 0.4rem 1rem;
+        border-radius: 1.7rem;
+        transition: all .2s;
+        margin-right: -3rem; // to position magnifying glass
+
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--color-grey-light-3);
+        }
+
+        &::-webkit-input-placeholder {
+            color: var(--color-grey-dark-3);
+        }
+    }
+
+    &-button {
+        background-color: var(--color-grey-light-2);
+        border: none;
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &-input:focus + &-button { // as we need to change the color of magnifying glass on input focus
+        background-color: var(--color-grey-light-3);
+    }
+
+    &-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: var(--color-grey-dark-3);
+    }
+}
+
+// User navigation
+.user-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+        margin-left: 1.5rem;
+    }
+
+    &-icon-box {
+
+    }
+
+    &-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &-notifications {
+
+    }
+
+    &-user {
+
+    }
+
+    &-user-photo {
+        height: 2.25rem;
+        border-radius: 50%;
+    }
+
+    &-user-name {
+
+    }
+}
