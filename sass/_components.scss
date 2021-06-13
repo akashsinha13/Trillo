@@ -276,7 +276,7 @@
     flex: 0 0 60%;
     padding: 1rem;
     background-color: white;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.6);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
     margin-right: 2.5rem;
 
     .paragraph {
@@ -345,5 +345,71 @@
 
 .user-reviews {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
+}
+
+.review {
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &-text {
+        margin-bottom: 1.7rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    &-user {
+        display: flex;
+        align-items: center;
+    }
+
+    &-photo {
+        height: 3rem;
+        border-radius: 50%;
+        margin-right: 0.8rem;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -5.5rem;
+        left: -0.5rem;
+        font-size: 13rem;
+        color: var(--color-grey-light-3);
+        font-family: sans-serif;
+        z-index: 1;
+    }
+}
+
+.user {
+    &-box {
+        margin-right: auto;
+    }
+
+    &-name {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &-date {
+        font-size: 0.8rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &-rating {
+        font-weight: 300;
+        font-size: 1.7rem;
+        color: var(--color-primary);
+    }
+}
+
+.btn {
+    align-self: center;
 }
