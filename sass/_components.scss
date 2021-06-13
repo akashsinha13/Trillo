@@ -264,3 +264,86 @@
         box-shadow: none;
     }
 }
+
+//Details
+.detail {
+    display: flex;
+    padding: 3.5rem;
+    border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.description {
+    flex: 0 0 60%;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.6);
+    margin-right: 2.5rem;
+
+    .paragraph {
+        margin-bottom: 2rem;
+    }
+
+    .list {
+        list-style: none;
+        padding: 2rem 0;
+        margin: 2rem 0;
+        border-bottom: 1px solid var(--color-grey-light-2);
+        border-top: 1px solid var(--color-grey-light-2);
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            flex: 0 0 50%;
+            margin-bottom: 0.5rem;
+        }
+
+        &-item::before {
+            content: "";
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+            margin-right: 0.5rem;
+
+            // for older browser
+            // background-image: url(../img/chevron-thin-right.svg);
+            // background-size: cover;
+
+            // for new browser
+            // we can't change color of background image, in case if we want to do
+            // we can use mask
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg); // cool stuff
+            -webkit-mask-size: cover;
+
+        }
+    }
+}
+
+.recommend {
+    display: flex;
+    align-items: center;
+
+    &-count {
+        font-size: 0.8rem;
+        margin-right: auto;
+    }
+
+    &-friends {
+        & > * {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: -1rem;
+        }
+
+    }
+}
+
+.user-reviews {
+    flex: 1;
+    background-color: white;
+}
