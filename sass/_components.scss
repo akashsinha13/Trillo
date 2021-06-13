@@ -109,7 +109,7 @@
     }
 }
 
-//sidebar
+//Sidebar Section
 .sidebar-nav {
     font-size: 1.1rem;
     list-style: none;
@@ -150,8 +150,8 @@
         width: 3px;
         background-color: var(--color-primary);
         transform: scaleY(0);
-        transition: transform 0.2s,
-                    width 0.4s cubic-bezier(1, 0, 0, 1) .2s; // we can apply different timing for diffrent props.
+        transition: transform 0.1s,
+                    width 0.2s cubic-bezier(1, 0, 0, 1) .1s; // we can apply different timing for diffrent props.
     }
 
     &-item:hover::before,
@@ -167,7 +167,7 @@
     padding: 1rem;
 }
 
-//gallery
+//Gallery Section
 .gallery {
     display: flex;
 
@@ -265,7 +265,7 @@
     }
 }
 
-//Details
+//Details Section
 .detail {
     display: flex;
     padding: 3.5rem;
@@ -410,6 +410,53 @@
     }
 }
 
-.btn {
-    align-self: center;
+// CTA Section
+.cta {
+    padding: 2rem 0;
+    text-align: center;
+    background-color: white;
+
+    &-book-now {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+    }
+
+    &-btn {
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    
+        & > * {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            transition: all .2s;
+        }
+    
+        &-visible { 
+            padding: 1rem 3.5rem;
+        }
+    
+        &-hidden {
+            padding: 1rem 0;
+            position: absolute;
+            left: 0;
+            top: -100%;
+            
+        }
+    
+        &:hover &-visible {
+               transform: translateY(100%); 
+        }
+    
+        &:hover &-hidden {
+                top: 0;
+        }
+    }
 }

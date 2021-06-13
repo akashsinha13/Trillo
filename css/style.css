@@ -137,7 +137,7 @@ body {
     width: 3px;
     background-color: var(--color-primary);
     transform: scaleY(0);
-    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+    transition: transform 0.1s, width 0.2s cubic-bezier(1, 0, 0, 1) 0.1s; }
   .sidebar-nav-item:hover::before, .sidebar-nav-item-active::before {
     transform: scaleY(1);
     width: 100%; }
@@ -314,8 +314,39 @@ body {
   font-size: 1.7rem;
   color: var(--color-primary); }
 
-.btn {
-  align-self: center; }
+.cta {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: white; }
+  .cta-book-now {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1.5rem; }
+  .cta-btn {
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden; }
+    .cta-btn > * {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      transition: all .2s; }
+    .cta-btn-visible {
+      padding: 1rem 3.5rem; }
+    .cta-btn-hidden {
+      padding: 1rem 0;
+      position: absolute;
+      left: 0;
+      top: -100%; }
+    .cta-btn:hover .cta-btn-visible {
+      transform: translateY(100%); }
+    .cta-btn:hover .cta-btn-hidden {
+      top: 0; }
 
 .container {
   background-color: var(--color-grey-light-1);
